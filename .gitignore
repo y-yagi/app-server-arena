@@ -2,3 +2,5 @@
 /config/twitter.yml
 /.rbx
 /.ruby-version
+/log
+/tmp
