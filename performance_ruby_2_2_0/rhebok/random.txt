@@ -1,16 +1,16 @@
       done.
 
-Transactions:		         100 hits
+Transactions:		       10000 hits
 Availability:		      100.00 %
-Elapsed time:		        5.43 secs
-Data transferred:	        0.26 MB
-Response time:		        0.41 secs
-Transaction rate:	       18.42 trans/sec
-Throughput:		        0.05 MB/sec
-Concurrency:		        7.60
-Successful transactions:         100
+Elapsed time:		      375.64 secs
+Data transferred:	       26.85 MB
+Response time:		        0.36 secs
+Transaction rate:	       26.62 trans/sec
+Throughput:		        0.07 MB/sec
+Concurrency:		        9.69
+Successful transactions:       10000
 Failed transactions:	           0
-Longest transaction:	        1.93
+Longest transaction:	        1.91
 Shortest transaction:	        0.00
  
 FILE: /var/log/siege.log

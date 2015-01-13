@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # passenger / puma / raptor(passenger 5) / rhebok / thin /unicorn
-SERVER=unicorn
-REQUEST=10
+SERVER=rhebok
+REQUEST=1000
 CLIENT=10
 
 siege -r ${REQUEST} -c ${CLIENT} -b -q  http://localhost:3000/sleep  > performance_ruby_2_2_0/${SERVER}/sleep.txt 2>&1

@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/phusion/passenger.git
+  revision: 1e69a82652f15d26a126db233a65190e4b78a8ce
+  specs:
+    passenger (5.0.0.beta2)
+      daemon_controller (>= 1.2.0)
+      rack
+      rake (>= 0.8.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -7,16 +16,12 @@ GEM
     eventmachine (1.0.4)
     ey_config (0.0.7)
     ffi (1.9.6-java)
-    json (1.8.1)
-    json (1.8.1-java)
-    kgio (2.9.2)
+    json (1.8.2)
+    json (1.8.2-java)
+    kgio (2.9.3)
     method_source (0.8.2)
-    newrelic_rpm (3.9.8.273)
+    newrelic_rpm (3.9.9.275)
     oauth (0.4.7)
-    passenger (4.0.57)
-      daemon_controller (>= 1.2.0)
-      rack
-      rake (>= 0.8.1)
     prefork_engine (0.0.5)
       proc-wait3 (~> 1.7.2)
     proc-wait3 (1.7.2)
@@ -38,7 +43,7 @@ GEM
       rack
     raindrops (0.13.0)
     rake (10.4.2)
-    rhebok (0.2.1)
+    rhebok (0.2.3)
       prefork_engine (>= 0.0.4)
       rack
     sinatra (1.4.5)
@@ -67,7 +72,7 @@ DEPENDENCIES
   json
   newrelic_rpm
   oauth
-  passenger (= 4.0.57)
+  passenger!
   pry
   puma
   rhebok
