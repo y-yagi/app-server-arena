@@ -4,6 +4,10 @@ gem 'sinatra'
 gem 'json'
 gem 'oauth'
 
+gem 'rails', github: 'rails/rails'
+gem 'arel', github: 'rails/arel'
+gem 'sqlite3'
+
 group :development, :test do
   gem 'pry' # obviously don't do this in prod, just for demo purposes
 end

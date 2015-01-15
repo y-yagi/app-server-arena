@@ -5,8 +5,15 @@ require 'yaml'
 require 'oauth'
 require 'pry' unless ENV['RACK_ENV'] == 'production' # No pry in prod!
 require 'json'
+require 'logger'
+require 'active_record'
+require_relative 'user'
+
 
 Bundler.require(ENV['RACK_ENV'] || :default)
+
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'tmp/db')
+ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 require './app.rb'
 run AppServerArena

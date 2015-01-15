@@ -24,6 +24,10 @@ class AppServerArena < Sinatra::Base
     do_random
   end
 
+  get '/active_record' do
+    do_active_record
+  end
+
 private
   def do_random
     num = 1 + rand(10) # random number b/t 1 and 10
@@ -59,6 +63,11 @@ private
 
   def index
     erb :index
+  end
+
+  def do_active_record
+    @users = User.all
+    erb :active_record
   end
 
   def twitter_consumer

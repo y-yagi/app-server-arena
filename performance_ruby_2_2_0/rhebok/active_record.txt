@@ -1,0 +1,19 @@
+      done.
+
+Transactions:		       10000 hits
+Availability:		      100.00 %
+Elapsed time:		      128.88 secs
+Data transferred:	      457.21 MB
+Response time:		        0.13 secs
+Transaction rate:	       77.59 trans/sec
+Throughput:		        3.55 MB/sec
+Concurrency:		        9.95
+Successful transactions:       10000
+Failed transactions:	           0
+Longest transaction:	        0.39
+Shortest transaction:	        0.02
+ 
+FILE: /var/log/siege.log
+You can disable this annoying message by editing
+the .siegerc file in your home directory; change
+the directive 'show-logfile' to false.
