@@ -1,16 +1,56 @@
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
+[[1;33merror[0m] socket: read error Connection reset by peer sock.c:479: Connection reset by peer
       done.
 
-Transactions:		       10000 hits
-Availability:		      100.00 %
-Elapsed time:		       11.10 secs
-Data transferred:	       23.76 MB
-Response time:		        0.01 secs
-Transaction rate:	      900.90 trans/sec
-Throughput:		        2.14 MB/sec
-Concurrency:		        9.11
-Successful transactions:       10000
-Failed transactions:	           0
-Longest transaction:	        1.02
+Transactions:		       99960 hits
+Availability:		       99.96 %
+Elapsed time:		      121.41 secs
+Data transferred:	      237.37 MB
+Response time:		        0.11 secs
+Transaction rate:	      823.33 trans/sec
+Throughput:		        1.96 MB/sec
+Concurrency:		       90.34
+Successful transactions:       99960
+Failed transactions:	          40
+Longest transaction:	       15.05
 Shortest transaction:	        0.00
  
 FILE: /var/log/siege.log

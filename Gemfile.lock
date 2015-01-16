@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/phusion/passenger.git
-  revision: b332c068a72ee21f0965ad82868bb7824973ebed
+  revision: 77ef4b0ecd69f8979e35a88c0521c2c6ffbe0c80
   specs:
     passenger (5.0.0.beta2)
       daemon_controller (>= 1.2.0)

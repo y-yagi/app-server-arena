@@ -1,17 +1,17 @@
       done.
 
-Transactions:		       10000 hits
+Transactions:		      100000 hits
 Availability:		      100.00 %
-Elapsed time:		     1677.27 secs
-Data transferred:	        0.65 MB
-Response time:		        1.68 secs
-Transaction rate:	        5.96 trans/sec
+Elapsed time:		    16762.39 secs
+Data transferred:	        6.48 MB
+Response time:		       16.75 secs
+Transaction rate:	        5.97 trans/sec
 Throughput:		        0.00 MB/sec
-Concurrency:		        9.99
-Successful transactions:       10000
+Concurrency:		       99.95
+Successful transactions:      100000
 Failed transactions:	           0
-Longest transaction:	        2.02
-Shortest transaction:	        1.00
+Longest transaction:	       17.17
+Shortest transaction:	        1.01
  
 FILE: /var/log/siege.log
 You can disable this annoying message by editing
