@@ -1,12 +1,49 @@
 #!/bin/sh
 
-# passenger / puma / raptor(passenger 5) / rhebok / thin /unicorn
-SERVER=rhebok
-REQUEST=1000
-CLIENT=100
+SERVERS=(passenger puma Rhebok thin unicorn)
 
-siege -r ${REQUEST} -c ${CLIENT} -b -q  http://localhost:3000/sleep  > performance_ruby_2_2_0/${SERVER}/sleep.txt 2>&1
-siege -r ${REQUEST} -c ${CLIENT} -b -q  http://localhost:3000/pi     > performance_ruby_2_2_0/${SERVER}/pi.txt 2>&1
-siege -r ${REQUEST} -c ${CLIENT} -b -q  http://localhost:3000/server > performance_ruby_2_2_0/${SERVER}/server.txt 2>&1
-siege -r ${REQUEST} -c ${CLIENT} -b -q  http://localhost:3000/random > performance_ruby_2_2_0/${SERVER}/random.txt 2>&1
-siege -r ${REQUEST} -c ${CLIENT} -b -q  http://localhost:3000/active_record > performance_ruby_2_2_0/${SERVER}/active_record.txt 2>&1
+# stop servers
+pkill -f ruby &> /dev/null
+
+# seeds
+ruby ./setup.rb &> /dev/null
+
+# run servers
+for i in "${!SERVERS[@]}"; do
+  rackup -s ${SERVERS[$i]} --port "300$i" -E production config.ru &> /dev/null &
+done
+sleep 10
+
+# warm
+for i in "${!SERVERS[@]}"; do
+  curl -s -o /dev/null -I -w "%{http_code}\n" "http://localhost:300$i/"
+done
+
+# test
+echo active_record
+for i in "${!SERVERS[@]}"; do
+  wrk -c 10 -d 10s -t 10 "http://localhost:300$i/active_record" > "performance/${SERVERS[$i]}/active_record.txt" 2>&1
+done
+
+echo pi
+for i in "${!SERVERS[@]}"; do
+  wrk -c 10 -d 10s -t 10 "http://localhost:300$i/pi" > "performance/${SERVERS[$i]}/pi.txt" 2>&1
+done
+
+echo random
+for i in "${!SERVERS[@]}"; do
+  wrk -c 10 -d 10s -t 10 "http://localhost:300$i/random" > "performance/${SERVERS[$i]}/random.txt" 2>&1
+done
+
+echo server
+for i in "${!SERVERS[@]}"; do
+  wrk -c 10 -d 10s -t 10 "http://localhost:300$i/server" > "performance/${SERVERS[$i]}/server.txt" 2>&1
+done
+
+echo sleep
+for i in "${!SERVERS[@]}"; do
+  wrk -c 10 -d 10s -t 10 "http://localhost:300$i/sleep" > "performance/${SERVERS[$i]}/sleep.txt" 2>&1
+done
+
+# stop servers
+pkill -f ruby &> /dev/null
