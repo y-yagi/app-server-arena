@@ -1,0 +1,8 @@
+Running 10s test @ http://localhost:3003/active_record
+  10 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   247.21ms   64.61ms 431.47ms   75.94%
+    Req/Sec     3.98      1.76    10.00     86.18%
+  399 requests in 10.09s, 18.32MB read
+Requests/sec:     39.54
+Transfer/sec:      1.82MB

@@ -1,0 +1,8 @@
+Running 10s test @ http://localhost:3002/pi
+  10 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   149.38ms   18.54ms 258.05ms   84.38%
+    Req/Sec     6.87      2.65    10.00     41.14%
+  666 requests in 10.06s, 3.42MB read
+Requests/sec:     66.20
+Transfer/sec:    348.28KB

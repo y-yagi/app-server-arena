@@ -4,12 +4,12 @@ gem 'sinatra'
 gem 'json'
 gem 'oauth'
 
-gem 'rails', github: 'rails/rails'
-gem 'arel', github: 'rails/arel'
+gem 'rails'
+gem 'arel'
 gem 'sqlite3'
 
 group :development, :test do
-  gem 'pry' # obviously don't do this in prod, just for demo purposes
+  gem 'pry'
 end
 
 group :production do
@@ -18,12 +18,19 @@ group :production do
 end
 
 group :app_servers do
-  gem 'puma', require: 'puma' # doesn't show up otherwise for some reason
-  gem 'passenger', github: 'phusion/passenger'
-  #gem 'passenger', '4.0.57'
+  gem 'puma'
+  gem 'passenger'
+  gem 'passenger-rails'
   gem 'rhebok'
-  platforms :ruby, :rbx do
+  platforms :rbx do
     gem 'unicorn'
+    gem 'unicorn-rails'
+    gem 'thin'
+  end
+  platforms :ruby do
+    gem 'iodine'
+    gem 'unicorn'
+    gem 'unicorn-rails'
     gem 'thin'
   end
 end

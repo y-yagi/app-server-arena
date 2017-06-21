@@ -48,7 +48,7 @@ private
 
   def server
     # Figure out which app server we're running under
-    @current_server = app_server
+    @current_server = ENV['RACK_HANDLER']
 
     # Set the request and response objects for page rendering
     @request = request
@@ -68,32 +68,6 @@ private
   def do_active_record
     @users = User.all
     erb :active_record
-  end
-
-  def twitter_consumer
-    creds = YAML.load_file(File.join(File.dirname(__FILE__), 'config', 'twitter.yml'))
-    consumer = OAuth::Consumer.new(creds["consumer_key"], creds["consumer_secret"],
-      {
-        site: 'https://api.twitter.com',
-        scheme: :header
-      }
-    )
-
-    token_hash = { oauth_token: creds["oauth_token"], oauth_token_secret: creds["oauth_secret"] }
-
-    return OAuth::AccessToken.from_hash(consumer, token_hash)
-  end
-
-  def app_server
-    # Figure out which server we're running under
-    ["Rainbows", "Puma", "Thin", "Unicorn", "PhusionPassenger", "Rhebok"].each do |s|
-      if Module.const_defined? s
-        return s
-      end
-    end
-
-    # No return yet, push out nil because we don't know the app server.
-    return nil
   end
 
   # These two methods are to be used for a semi-computationally expensive task,
