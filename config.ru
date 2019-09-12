@@ -3,7 +3,6 @@ require 'bundler'
 require 'sinatra/base'
 require 'yaml'
 require 'oauth'
-require 'pry' unless ENV['RACK_ENV'] == 'production' # No pry in prod!
 require 'json'
 require 'logger'
 require 'active_record'
