@@ -13,6 +13,7 @@ end
 
 group :app_servers do
   gem 'puma'
-  gem 'passenger'
   gem 'unicorn'
+  gem 'falcon'
+  gem 'iodine'
 end
