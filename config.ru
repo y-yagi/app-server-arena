@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'bundler'
 require 'sinatra/base'
 require 'yaml'
 require 'oauth'
